@@ -1,3 +1,9 @@
+## v0.2.1:
+
+* Added gpg_passphrase
+* Added encrypt
+* Fixed use_https to use 'Yes' or 'No'
+
 ## v0.2.0:
 
 * Added Test Kitchen support.

@@ -11,3 +11,6 @@ default["s3cmd"]["enable_multipart"]        = true
 default["s3cmd"]["multipart_chunk_size_mb"] = 15
 default["s3cmd"]["proxy_host"]              = ""
 default["s3cmd"]["proxy_port"]              = 0
+
+default["s3cmd"]["encrypt"]                 = false
+default["s3cmd"]["gpg_passphrase"]          = ""

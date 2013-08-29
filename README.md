@@ -27,6 +27,8 @@ Installs and configures [s3cmd](https://github.com/s3tools/s3cmd).
 * `node["s3cmd"]["secret_key"]` - AWS secret key. If prefixed with `$` an
   environment lookup occurs.
 * `node["s3cmd"]["use_https"]` - Flag for using HTTPS to communicate to S3.
+* `node["s3cmd"]["encrypt"]` - Flag for encrypting data in s3.
+* `node["s3cmd"]["gpg_passphrase"]` - Your secret gpg passphrase.
 * `node["s3cmd"]["reduced_redundancy"]` - Flag for reduced redundancy S3.
 * `node["s3cmd"]["enable_multipart"]` - Enable multipart uploads.
 * `node["s3cmd"]["multipart_chunk_size_mb"]` - Multipart upload chunk size in
@@ -53,4 +55,16 @@ s3cmd "/home/vagrant/test" do
   aws_secret_access_key "<AWS_SECRET_ACCESS_KEY>"
   action :sync
 end
+```
+
+Sample attributes
+
+``` json
+"s3cmd": {
+  "encrypt": true,
+  "gpg_passphrase": "<GPG_PASSPHRASE>",
+  "access_key": "<AWS_ACCESS_KEY_ID>",
+  "secret_key": "<AWS_SECRET_ACCESS_KEY>",
+  "https": true
+}
 ```

@@ -56,6 +56,7 @@ template ::File.join(node["s3cmd"]["dir"], "etc", "s3cfg") do
     :enable_multipart         => node["s3cmd"]["enable_multipart"],
     :multipart_chunk_size_mb  => node["s3cmd"]["multipart_chunk_size_mb"],
     :proxy_host               => node["s3cmd"]["proxy_host"],
-    :proxy_port               => node["s3cmd"]["proxy_port"]
+    :encrypt                  => node["s3cmd"]["encrypt"],
+    :gpg_passphrase           => node["s3cmd"]["gpg_passphrase"]
   )
 end
